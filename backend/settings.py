@@ -41,9 +41,12 @@ INSTALLED_APPS = [
     # our apps
     "core",
     "graphene_django",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -140,3 +143,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 GRAPHENE = {
     "SCHEMA": "core.schema.schema"  # path to GraphQL schema (we'll create this)
 }
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]

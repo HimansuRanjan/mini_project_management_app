@@ -1,3 +1,11 @@
 from django.test import TestCase
+from .models import Organization
 
-# Create your tests here.
+class OrganizationModelTest(TestCase):
+    def test_create_org(self):
+        org = Organization.objects.create(
+            name="Test Org",
+            slug="test-org",
+            contact_email="test@example.com"
+        )
+        self.assertEqual(org.slug, "test-org")
