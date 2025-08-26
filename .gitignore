@@ -1,0 +1,40 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+venv/
+env/
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+*.so
+*.mo
+local_settings.py
+db.sqlite3
+media/
+staticfiles/
+static/
+
+# Environment variables
+.env
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+
+# Docker extras
+*.pid
+*.seed
+*.bak
+*~
+
+# Node (if frontend is inside same repo)
+node_modules/
+build/
+dist/
